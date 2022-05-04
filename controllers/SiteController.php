@@ -63,7 +63,14 @@ class SiteController extends Controller
     {
         // echo Yii::getAlias('@yii');
         // die;
+        //
+        // carregando params
         // echo Yii::$app->params['instagram'];
+        // die;
+
+        //testes com meu component.
+        // $myComponent = Yii::$app->myComponent;
+        // $myComponent->printString();
         // die;
         return $this->render('index');
     }
