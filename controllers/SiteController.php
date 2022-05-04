@@ -61,6 +61,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        // echo Yii::getAlias('@yii');
+        // die;
+        // echo Yii::$app->params['instagram'];
+        // die;
         return $this->render('index');
     }
 

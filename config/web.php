@@ -5,8 +5,17 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
+    'name' => 'TestandoYii', //nome da aplicação Padrao é 'MyApplication'
+    'version' => '1.0',      //Adicionado manualmente 
+    'charset' => 'utf-8',    //Adicionado manualmente
+    'language' => 'pt_br',   //Adicionado manualmente
+    'sourceLanguage' => 'en-US', //Adicionado manualmente
+    'timezone' => 'America/Sao_Paulo', //Adicionado manualmente
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    // 'catchAll' => [ //Redireciona todas requisições pra algum lugar específico.
+    //     'pessoas/index'
+    // ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
