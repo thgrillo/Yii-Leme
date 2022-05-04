@@ -1,0 +1,9 @@
+Estrutura de uma aplicação Yii
+
+Script de Entrada   -> Verifica PROD ou DEV com debug true ou false.
+Aplicação           -> Array de configuração da aplicação.
+Components          -> Components são pedaços do código que podem ser reutilizados.(fornecem diferentes serviços para o processamento de requisições)
+Modulos             -> Um nível a mais pra organizar a aplicação.
+Filtros             -> Código é chamado ou chama o controller.
+widgets             -> São blocos de construção reutilizáveis usados nas views.
+
