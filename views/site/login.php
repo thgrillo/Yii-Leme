@@ -11,7 +11,8 @@ $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <?= "<h2>Teste</h2>" ?> <!-- Vai carregar o código usando a tag <h2> (ficando maior) -->
+    <h1><?= Html::encode("<h2>Teste</h2>") ?></h1> <!-- Vai carregar o código com as tags HTML inline -->
 
     <p>Please fill out the following fields to login:</p>
 

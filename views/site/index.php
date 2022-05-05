@@ -6,6 +6,8 @@ $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
+    <?= $nome . " " . $sobrenome // valores que foram passados por parametros da actionView (SiteCotroller) ?> 
+
     <div class="jumbotron text-center bg-transparent">
         <h1 class="display-4">Congratulations!</h1>
 

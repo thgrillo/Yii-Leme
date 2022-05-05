@@ -59,7 +59,8 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex($id, $name='Thiago')
+    public function actionIndex()
+    // public function actionIndex($id, $name='Thiago')   exemplo aula 10
     {
         // echo Yii::getAlias('@yii');
         // die;
@@ -73,9 +74,12 @@ class SiteController extends Controller
         // $myComponent->printString();
         // die;
 
-        var_dump($id, $name);
-        die;
-        return $this->render('index');
+        // var_dump($id, $name); exemplo 10
+        // die;
+        return $this->render('index', [
+            'nome' => 'Thiago',
+            'sobrenome' => 'Grillo'
+        ]);
     }
 
     /**
