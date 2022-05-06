@@ -2,11 +2,21 @@
 
 /** @var yii\web\View $this */
 
+use yii\jui\DatePicker; //#12 Yii2 - Widgets
+
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
     <?= $nome . " " . $sobrenome // valores que foram passados por parametros da actionView (SiteCotroller) ?> 
+
+    <div>
+        <?= DatePicker::widget([
+            'name' => 'data_venda', //no html cria o campo com name='data_venda'
+            'language' => 'pt-br',
+            'dateFormat' => 'dd/MM/yyyy'
+        ]) //#12 Yii2 - Widgets ?> 
+    </div>
 
     <div class="jumbotron text-center bg-transparent">
         <h1 class="display-4">Congratulations!</h1>
