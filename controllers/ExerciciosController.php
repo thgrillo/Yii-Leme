@@ -27,37 +27,41 @@ class ExerciciosController extends Controller
     }
 
     public function actionPessoas(){
-        //array com os dados do banco
+        // array com os dados do banco
         // $pessoas = Pessoas::find()->orderBy('nome')->all();
         // echo '<pre>'; print_r($pessoas);
 
-        //mostra pessoa com indice 1 (Thiago-thiago_grillo@hotmail.com)
+        // mostra pessoa com indice 1 (Thiago-thiago_grillo@hotmail.com)
         // $pessoa = Pessoas::findOne(1);
         // echo $pessoa->nome . '-' . $pessoa->email;
 
-        //alterando o nome do indice 1 (Thiago) pra Thiago Grilo.
+        // alterando o nome do indice 1 (Thiago) pra Thiago Grilo.
         // $pessoa = Pessoas::findOne(1);
         // $pessoa->nome = 'Thiago Grillo';
         
         // $pessoa->save();
         // echo $pessoa->nome . '-' . $pessoa->email;
 
-        $query = Pessoas::find();
+            $query = Pessoas::find();
 
-        $pagination = new Pagination([
-            'defaultPageSize' => 1,
-            'totalCount' => $query->count()
-        ]);
+            $pagination = new Pagination([
+                'defaultPageSize' => 1,
+                'totalCount' => $query->count()
+            ]);
 
-        $pessoas = $query->orderBy('nome')
-                         ->offset($pagination->offset)
-                         ->limit($pagination->limit)
-                         ->all();
+            $pessoas = $query->orderBy('nome')
+                             ->offset($pagination->offset)
+                             ->limit($pagination->limit)
+                             ->all();
 
-        return $this->render('pessoas', [
-            'pessoas' => $pessoas,
-            'pagination' => $pagination
-        ]);
+            return $this->render('pessoas', [
+                'pessoas' => $pessoas,
+                'pagination' => $pagination
+            ]);
 
-    }
+        }
+
+    
+   
+
 }

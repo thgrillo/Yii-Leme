@@ -3,6 +3,10 @@
 /** @var yii\web\View $this */
 
 use yii\jui\DatePicker; //#12 Yii2 - Widgets
+use app\classes\widgets\HelloWidget;
+use app\classes\widgets\HelloWorldBeginEndWidget;
+use yii\helpers\Html;
+use yii\helpers\HtmlPurifier;
 
 $this->title = 'My Yii Application';
 ?>
@@ -16,6 +20,26 @@ $this->title = 'My Yii Application';
             'language' => 'pt-br',
             'dateFormat' => 'dd/MM/yyyy'
         ]) //#12 Yii2 - Widgets ?> 
+    </div>
+
+
+    <!-- #12 Yii2 - Widgets  criando o meu proprio-->
+    <div>
+        <?= 
+        HelloWidget::widget([
+            'message' => 'Ola Mundo',
+            'submessage' => 'mudando texto'
+        ]); ?> 
+    </div>
+    <!-- #12 Yii2 - Widgets -->
+
+
+    <div>
+    <!--      HelloWorldBeginEndWidget::begin(['encode'=>false]) //#12 Yii2 - Widgets vai renderizar com as tags html  -->
+        <?php HelloWorldBeginEndWidget::begin() //#12 Yii2 - Widgets vai renderizar sem as tags html ?> 
+        <h2>Testando aulas</h2>
+        <h3>testestesteste</h3>
+        <?php HelloWorldBeginEndWidget::end() //#12 Yii2 - Widgets ?> 
     </div>
 
     <div class="jumbotron text-center bg-transparent">
