@@ -6,7 +6,7 @@ use yii\web\AssetBundle;
 
 class SegundoAsset extends AssetBundle{
 
-    public $basePath = '@app/assets/meusAssets/files';
+    public $sourcePath = '@app/assets/meusAssets/files';
 
     public $css = [
         'estilo-1.css'
