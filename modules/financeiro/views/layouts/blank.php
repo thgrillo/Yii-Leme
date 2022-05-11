@@ -16,6 +16,7 @@ use yii\bootstrap4\Html;
 </head>
 <body>
 <?php $this->beginBody() ?>
+    <h1>Area Financeira</h1>
     <div>
         <?= $content ?>
     </div>
