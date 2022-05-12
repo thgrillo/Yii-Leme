@@ -29,6 +29,10 @@ $config = [
             'class' => 'app\classes\components\myComponent',
             'string' => 'Yii teste com myComponent',
         ],
+        'formatter' => [
+            'class' =>'app\classes\components\MyFormatter',
+            'dateFormat' => 'dd/MM/yyyy'
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
